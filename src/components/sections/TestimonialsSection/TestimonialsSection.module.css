@@ -1,0 +1,43 @@
+.section {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding-block: 74px 60px;
+  background: var(--color-page-tint);
+}
+
+.backdrop { z-index: 0; }
+.glow { position: absolute; }
+.glowBleedLg { position: absolute; inset: -3.52%; }
+.glowBleedMd { position: absolute; inset: -5.95%; }
+.glow1 { top: -241px; left: 842px; width: 1137px; height: 1137px; }
+.glow2 { top: -138px; left: 395px; width: 672px; height: 672px; }
+.glow3 { top: 149px; left: -442px; width: 1137px; height: 1137px; }
+
+.content {
+  position: relative;
+  z-index: var(--z-content);
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: minmax(0, 577px) minmax(0, 580px);
+  column-gap: 43px;
+  align-items: end;
+  justify-content: space-between;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 374px));
+  justify-content: center;
+  align-items: start;
+  gap: 41px;
+}
+
+@media (max-width: 899px) {
+  .header { grid-template-columns: minmax(0, 1fr); row-gap: var(--space-4); }
+}
