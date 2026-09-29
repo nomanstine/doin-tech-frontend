@@ -1,0 +1,57 @@
+.row {
+  display: grid;
+  grid-template-columns: 541px minmax(0, 580px);
+  column-gap: 79px;
+  align-items: center;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.title { max-width: 391px; }
+.brand { font-weight: 700; color: var(--color-text-primary); }
+
+/* A fixed 541×596 composition, laid out exactly as in the design. */
+.visual {
+  position: relative;
+  width: 541px;
+  height: 596px;
+}
+
+.revenue { position: absolute; top: 44px; left: 0; }
+.yearToDate { position: absolute; top: 194px; left: 0; }
+
+.instructor {
+  position: absolute;
+  top: 0;
+  left: 28px;
+  width: 435px;
+  height: 596px;
+  overflow: hidden;
+  filter: var(--filter-cutout-shadow);
+}
+
+/* The photo is a 683px square, cropped by the 435×596 frame. */
+.instructorImage {
+  position: absolute;
+  top: 0;
+  left: -124px;
+  width: 683px;
+  height: 683px;
+  max-width: none;
+}
+
+.students { position: absolute; top: 413px; left: 283px; }
+.ornament { top: 114px; left: 305px; width: 215px; }
+
+@media (max-width: 1279px) {
+  .row { grid-template-columns: minmax(0, 1fr); row-gap: 48px; }
+  .visual { justify-self: center; }
+  .text { order: -1; }
+}
+
+@media (max-width: 680px) { .visual { zoom: 0.7; } }
+@media (max-width: 480px) { .visual { zoom: 0.5; } }

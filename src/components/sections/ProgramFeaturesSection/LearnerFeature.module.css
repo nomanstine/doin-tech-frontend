@@ -1,0 +1,51 @@
+.row {
+  display: grid;
+  grid-template-columns: minmax(0, 574px) 621px;
+  column-gap: 63px;
+  align-items: center;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.description { max-width: 477px; }
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: var(--space-4) 56px;
+}
+
+/* A fixed 621×552 composition, laid out exactly as in the design. */
+.visual {
+  position: relative;
+  width: 621px;
+  height: 552px;
+}
+
+.course { position: absolute; top: 0; left: 0; width: 373px; }
+
+.student {
+  position: absolute;
+  top: 12px;
+  left: 0;
+  width: 577px;
+  height: auto;
+  filter: var(--filter-cutout-shadow);
+}
+
+.progress { position: absolute; top: 213px; left: 345px; }
+.ornament { top: 67px; left: 406px; width: 215px; }
+
+@media (max-width: 1279px) {
+  .row { grid-template-columns: minmax(0, 1fr); row-gap: 48px; }
+  .visual { justify-self: center; }
+}
+
+/* zoom shrinks the whole composition, layout included. */
+@media (max-width: 680px) { .visual { zoom: 0.7; } }
+@media (max-width: 480px) { .visual { zoom: 0.5; } }

@@ -1,0 +1,28 @@
+.section {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding-block: 120px;
+  background: var(--color-page-tint);
+}
+
+/* Blurred colour washes, placed on the 1440px frame. */
+.backdrop { z-index: 0; }
+.art { position: absolute; }
+.blobs { top: -466px; left: -508px; width: 2456px; height: 2391px; }
+.blobsBleed { position: absolute; inset: -1.67% -1.63%; }
+.glow { top: 946px; left: -287px; width: 672px; height: 672px; }
+.glowBleed { position: absolute; inset: -5.95%; }
+
+/* Left gutter matches the site's 120px; the right is tighter because row 1 is 1258px wide. */
+.content {
+  position: relative;
+  z-index: var(--z-content);
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+  max-width: 1439px;
+  margin-inline: auto;
+  padding-left: var(--page-gutter);
+  padding-right: clamp(16px, 4.25vw, 61px);
+}
