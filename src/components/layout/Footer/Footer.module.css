@@ -1,0 +1,79 @@
+.footer {
+  padding-block: 71px 53px;
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 130px;
+}
+
+.top {
+  display: grid;
+  grid-template-columns: minmax(0, 528px) minmax(0, 580px);
+  column-gap: 92px;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-4);
+}
+
+/* Lists sit 48px below the top, level with the newsletter tagline in the design. */
+.links {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 167px));
+  gap: var(--space-8) 40px;
+  padding-top: 48px;
+}
+
+.linkList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.link {
+  composes: bodyS tonePrimary from "../../ui/Typography/Typography.module.css";
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.link:hover { text-decoration: underline; }
+
+.legal {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-2) var(--space-6);
+  padding-top: 22px;
+  border-top: 1px solid var(--color-border);
+}
+
+.legalLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-6);
+}
+
+@media (max-width: 1023px) {
+  .inner { gap: var(--space-15); }
+  .top { grid-template-columns: minmax(0, 1fr); row-gap: var(--space-8); }
+  .links { padding-top: 0; }
+}
+
+@media (max-width: 559px) {
+  .links { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
