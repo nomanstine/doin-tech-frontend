@@ -1,0 +1,12 @@
+.section {
+  padding-block: 80px 81px;
+  background: var(--color-shuttle-gray-50);
+}
+
+.logos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: center;
+  gap: var(--space-8) 72px;
+}
