@@ -1,0 +1,34 @@
+.section { padding-top: 72px; }
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 42px;
+}
+
+.tabs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 21px;
+}
+
+.tabRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+}
+
+.more { text-decoration: none; }
+.more:hover { text-decoration: underline; }
+
+/* 42px gap above + 35px here = the 77px between tabs and cards in the design. */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 373px));
+  justify-content: center;
+  gap: 40px;
+  margin-top: 35px;
+}
