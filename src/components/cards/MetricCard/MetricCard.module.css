@@ -1,0 +1,29 @@
+.card {
+  --progress-track: var(--color-white);
+  color: var(--color-text-on-brand);
+}
+
+.compact { width: 134px; }
+
+.titles { display: flex; flex-direction: column; }
+.caption { font-size: 10px; line-height: 1.2; }
+
+.valueRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 200px;
+}
+
+.delta {
+  align-self: flex-start;
+  padding: 2px var(--space-2);
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 20px;
+  color: var(--color-text-primary);
+  background: var(--color-lime-500);
+  border-radius: var(--radius-pill);
+}
+
+.valueRow .delta { align-self: center; }
