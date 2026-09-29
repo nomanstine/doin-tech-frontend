@@ -1,0 +1,43 @@
+/* Everything here is positioned in cqw, i.e. as a fraction of the 578px student photo,
+   so the composition keeps its proportions as the photo scales down. */
+.frame {
+  position: relative;
+  z-index: 1;
+  container-type: inline-size;
+  width: min(100%, 578px);
+  margin: -2px auto 0;
+}
+
+.visual {
+  position: relative;
+  height: 88.58cqw; /* 512 / 578 */
+}
+
+.circle {
+  position: absolute;
+  top: 12.11cqw;
+  left: 50%;
+  width: 198.79cqw; /* 1149 / 578 */
+  max-width: none;
+  height: auto;
+  transform: translateX(-50%);
+}
+
+.student {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  filter: var(--filter-cutout-shadow);
+}
+
+.progressCard { position: absolute; top: 24.05cqw; left: 71.11cqw; }
+.studentsCard { position: absolute; top: 56.23cqw; left: -17.82cqw; }
+.categoryCard { position: absolute; top: 21.97cqw; left: -4.67cqw; }
+
+@media (max-width: 767px) {
+  .studentsCard,
+  .categoryCard { display: none; }
+  .progressCard { right: 0; left: auto; }
+}

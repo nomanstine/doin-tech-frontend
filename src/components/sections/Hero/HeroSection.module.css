@@ -1,0 +1,9 @@
+.hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding-top: clamp(136px, 12vw, 169px);
+  background: var(--color-bg-brand);
+}
+
+.grid { z-index: 0; }

@@ -1,0 +1,14 @@
+/* Sits above the photo, below the header. Purely decorative, so drop it on small screens. */
+.layer { z-index: 2; }
+
+@media (max-width: 899px) {
+  .layer { display: none; }
+}
+
+/* Positions/sizes taken from the 1440×1024 frame. */
+.springA { top: 672px; left: 1127px; width: 330px; }
+.springBLime { top: 221px; left: -118px; width: 385px; }
+.springBWhite { top: 477px; left: 183px; width: 175px; }
+.ring { top: 682px; left: 18px; width: 342px; }
+.cylinder { top: 221px; left: 1231px; width: 370px; }
+.pyramid { top: 464px; left: 1106px; width: 188px; }

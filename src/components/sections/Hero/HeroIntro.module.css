@@ -1,0 +1,21 @@
+.intro {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-15);
+  width: min(100%, var(--container-max));
+  margin-inline: auto;
+  padding-inline: var(--space-4);
+  text-align: center;
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-8);
+}
+
+.title { max-width: 935px; }
