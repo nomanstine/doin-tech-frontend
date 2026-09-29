@@ -1,0 +1,74 @@
+/* Design tokens — single source of truth, extracted from the Figma file.
+   Components never hardcode colors, spacing or type sizes: they read these. */
+:root {
+  /* Palette: Persian Blue / Electric Lime / Shuttle Gray */
+  --color-persian-blue-800: #003be2;
+  --color-electric-lime-400: #d4fb20;
+  --color-shuttle-gray-50: #f5f5f6;
+  --color-shuttle-gray-100: #e5e6e8;
+  --color-shuttle-gray-400: #82868e;
+  --color-shuttle-gray-950: #242528;
+  --color-white: #ffffff;
+  --color-track: #f6f6f6;
+  --color-shuttle-gray-200: #ced0d3;
+  --color-shuttle-gray-700: #4b4c53;
+  --color-ink-950: #040819; /* section headings */
+  --color-black: #000000;
+  --color-black-700: #4f4f4f;
+  --color-lime-500: #cbfc01;
+  --color-black-400: #888888;
+  --color-black-200: #d1d1d1;
+  --color-page-tint: #fafafa;
+
+  /* Semantic aliases (what components should use) */
+  --color-bg-brand: var(--color-persian-blue-800);
+  --color-accent: var(--color-electric-lime-400);
+  --color-surface: var(--color-white);
+  --color-text-primary: var(--color-shuttle-gray-950);
+  --color-text-muted: var(--color-shuttle-gray-400);
+  --color-text-on-brand: var(--color-shuttle-gray-50);
+  --color-text-on-brand-muted: var(--color-shuttle-gray-100);
+  --color-text-secondary: var(--color-shuttle-gray-700);
+  --color-border: var(--color-shuttle-gray-200);
+
+  /* Typography */
+  --font-heading: var(--font-poppins), "Poppins", system-ui, sans-serif;
+  --font-body: "Satoshi", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-brand: "Clash Display", "Satoshi", system-ui, sans-serif;
+  --text-heading-l: clamp(2.25rem, 1.2rem + 4.6vw, 4.5rem); /* 72px on desktop */
+
+  /* Spacing (px values used by the design) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-15: 60px;
+
+  /* Shape & effects */
+  --radius-md: 16px;
+  --radius-pill: 24px;
+  --blur-glass: 10px;
+  /* Figma's 8-layer soft shadow, expressed as a filter so it follows a cut-out's alpha */
+  --filter-cutout-shadow:
+    drop-shadow(0.518px 0.741px 3.036px rgb(0 0 0 / 0.04))
+    drop-shadow(2.233px 3.19px 5.723px rgb(0 0 0 / 0.06))
+    drop-shadow(5.383px 7.69px 9.571px rgb(0 0 0 / 0.07))
+    drop-shadow(10.208px 14.582px 16.087px rgb(0 0 0 / 0.08))
+    drop-shadow(16.946px 24.209px 24px rgb(0 0 0 / 0.09))
+    drop-shadow(25.838px 36.912px 36px rgb(0 0 0 / 0.1))
+    drop-shadow(37.122px 53.032px 56px rgb(0 0 0 / 0.11))
+    drop-shadow(51.038px 72.912px 72px rgb(0 0 0 / 0.13));
+
+  /* Layout */
+  --container-max: 1208px; /* 1200 design width + room for 1199/1202px grids */
+  --page-gutter: clamp(16px, 8.333vw, 120px); /* 120px at 1440 */
+  --header-height: 120px;
+  --stage-width: 1440px; /* Figma frame size, used for decorative art layers */
+  --stage-height: 1024px;
+
+  /* Stacking */
+  --z-content: 2;
+  --z-header: 10;
+}
