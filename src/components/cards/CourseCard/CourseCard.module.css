@@ -1,0 +1,72 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+  padding: 15px 15px 22px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+}
+
+.cover {
+  position: relative;
+  aspect-ratio: 341 / 195.145;
+  overflow: hidden;
+  background: #443131; /* shows while the photo loads, as in the design */
+  border-radius: 12px;
+}
+
+.coverImage { object-fit: cover; }
+
+.badges {
+  position: absolute;
+  bottom: 19px;
+  left: 12px;
+  display: flex;
+  gap: var(--space-3);
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.headline {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.titleBlock { flex: 1; min-width: 0; }
+
+.title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.title a { color: inherit; text-decoration: none; }
+.title a:hover { text-decoration: underline; }
+
+.author { color: var(--color-black-700); }
+.authorName { color: var(--color-persian-blue-800); }
+
+.rating {
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.price {
+  display: flex;
+  align-items: flex-end;
+}
