@@ -1,0 +1,15 @@
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-8);
+  width: min(100% - 2 * var(--space-4), 1200px);
+  margin-inline: auto;
+}
+
+@media (min-width: 1200px) {
+  .layout {
+    grid-template-columns: minmax(0, 1fr) 579px;
+    align-items: start;
+    gap: 0;
+  }
+}

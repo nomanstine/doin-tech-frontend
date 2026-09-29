@@ -1,0 +1,22 @@
+.page {
+  position: relative;
+  isolation: isolate;
+  min-height: 100vh;
+  overflow: hidden;
+  background: var(--color-bg-brand);
+}
+
+.grid { z-index: 0; }
+
+.header {
+  position: absolute;
+  top: 35px;
+  left: calc(var(--page-gutter) + 2px);
+  z-index: var(--z-header);
+}
+
+.main {
+  position: relative;
+  z-index: var(--z-content);
+  padding-block: var(--header-height) 120px;
+}

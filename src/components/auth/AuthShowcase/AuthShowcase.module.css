@@ -1,0 +1,29 @@
+.showcase {
+  position: relative;
+  padding-left: 2px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  max-width: 475px;
+}
+
+/* Decorative collage on a fixed canvas; only shown when there is room beside the form. */
+.composition {
+  display: none;
+  pointer-events: none;
+}
+
+@media (min-width: 1200px) {
+  .showcase { min-height: 780px; }
+  .composition { display: block; position: absolute; inset: 0; }
+}
+
+.buildCard { position: absolute; top: 274px; left: 0; width: 373px; }
+.dataCard { position: absolute; top: 185px; left: 111px; width: 373px; }
+.students { position: absolute; top: 620px; left: 226px; }
+.spring { top: 506px; left: 348px; width: 175px; }
+.ring { top: 200px; left: 29px; width: 146px; }
+.pyramid { top: 582px; left: -25px; width: 188px; }

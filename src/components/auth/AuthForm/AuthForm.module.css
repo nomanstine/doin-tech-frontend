@@ -1,0 +1,43 @@
+.card {
+  width: 100%;
+  min-height: 784px;
+  padding: 61px 63px 40px;
+  display: flex;
+  background: var(--color-surface);
+  border-radius: var(--radius-pill);
+}
+
+.content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-8);
+  width: 100%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+}
+
+.header { display: flex; flex-direction: column; }
+
+.fields {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--space-6);
+}
+
+.switch { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-1); }
+.switchText { color: var(--color-black-400); }
+.switchLink { color: var(--color-persian-blue-800); text-decoration: none; }
+.switchLink:hover { text-decoration: underline; }
+
+@media (max-width: 1199px) {
+  .card { min-height: 0; padding: 40px var(--space-6); }
+}
