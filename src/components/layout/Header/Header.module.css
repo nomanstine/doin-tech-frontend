@@ -1,0 +1,38 @@
+/* Transparent bar laid over the hero. Logo | centred nav | actions. */
+.header {
+  position: absolute;
+  inset: 0 0 auto 0;
+  z-index: var(--z-header);
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  height: var(--header-height);
+  padding-inline: var(--page-gutter);
+}
+
+.logo {
+  align-self: start;
+  margin-top: 35px;
+}
+
+.nav,
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.actions { justify-self: end; }
+
+.cart {
+  display: inline-flex;
+  border-radius: 4px;
+}
+
+.cart:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 4px; }
+
+/* No mobile design exists yet: hide the centre nav until a menu is designed. */
+@media (max-width: 767px) {
+  .header { grid-template-columns: 1fr auto; }
+  .nav { display: none; }
+}
