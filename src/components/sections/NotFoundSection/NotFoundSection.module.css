@@ -1,0 +1,46 @@
+.section {
+  /* The giant "404" and the overlap with the heading both scale from one size. */
+  --code-size: clamp(9rem, 33.333vw, 30rem); /* 480px on desktop */
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: clamp(136px, 11.111vw, 160px) 0 125px;
+  text-align: center;
+  background: var(--color-bg-brand);
+}
+
+.grid { z-index: 0; }
+
+.code {
+  font-family: var(--font-heading);
+  font-size: var(--code-size);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  color: transparent;
+  background-image: linear-gradient(
+    180deg,
+    rgb(212 251 32) 0%,
+    rgb(212 251 32 / 0.96) 25%,
+    rgb(212 251 32 / 0.81) 50.5%,
+    rgb(212 251 32 / 0.61) 68%,
+    rgb(255 255 255 / 0) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Pulled up so the heading sits over the faded lower part of the "404". */
+.content {
+  position: relative;
+  z-index: var(--z-content);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-8);
+  margin-top: calc(var(--code-size) * -0.248);
+  padding-inline: var(--space-4);
+}
+
+.title { max-width: 935px; }
