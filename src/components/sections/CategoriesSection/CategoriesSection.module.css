@@ -1,0 +1,14 @@
+.section { padding-block: 72px 120px; }
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 68px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 167px);
+  justify-content: center;
+  gap: 40px;
+}
