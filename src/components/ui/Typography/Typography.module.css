@@ -1,0 +1,30 @@
+/* Type scale from the Figma text styles. Large headings shrink fluidly on small screens. */
+.headingL { font-family: var(--font-heading); font-weight: 600; font-size: var(--text-heading-l); line-height: 1.2; letter-spacing: -0.01em; }
+.headingM { font-family: var(--font-heading); font-weight: 600; font-size: clamp(1.75rem, 1rem + 3vw, 2.75rem); line-height: 1.2; letter-spacing: -0.01em; }
+.headingS { font-family: var(--font-heading); font-weight: 600; font-size: clamp(1.5rem, 1rem + 2.2vw, 2.25rem); line-height: 1.2; letter-spacing: -0.01em; }
+.heading2xs { font-family: var(--font-heading); font-weight: 600; font-size: 24px; line-height: 32px; letter-spacing: -0.01em; }
+.headingXs { font-family: var(--font-heading); font-weight: 600; font-size: 20px; line-height: 1.2; letter-spacing: -0.01em; }
+.stat { font-family: var(--font-heading); font-weight: 600; font-size: 48px; line-height: 1.2; letter-spacing: -0.01em; }
+.figure { font-family: var(--font-heading); font-weight: 500; font-size: 36px; line-height: 44px; letter-spacing: -0.01em; }
+
+.bodyL { font-family: var(--font-body); font-weight: 400; font-size: 18px; line-height: 1.6; }
+.bodyM { font-family: var(--font-body); font-weight: 400; font-size: 16px; line-height: 1.5; }
+.bodyS { font-family: var(--font-body); font-weight: 400; font-size: 14px; line-height: 1.6; }
+.bodyXs { font-family: var(--font-body); font-weight: 400; font-size: 12px; line-height: 1.6; }
+
+.labelXl { font-family: var(--font-body); font-weight: 500; font-size: 20px; line-height: 1.2; }
+.labelL { font-family: var(--font-body); font-weight: 500; font-size: 18px; line-height: 1.2; }
+.labelM { font-family: var(--font-body); font-weight: 500; font-size: 16px; line-height: 1.2; }
+.labelS { font-family: var(--font-body); font-weight: 500; font-size: 14px; line-height: 1.2; }
+.labelXs { font-family: var(--font-body); font-weight: 500; font-size: 12px; line-height: 1.2; }
+
+.toneWhite { color: var(--color-white); }
+.toneInverse { color: var(--color-text-on-brand); }
+.toneInverseMuted { color: var(--color-text-on-brand-muted); }
+.tonePrimary { color: var(--color-text-primary); }
+.toneSecondary { color: var(--color-text-secondary); }
+.toneMuted { color: var(--color-text-muted); }
+.toneHeading { color: var(--color-ink-950); }
+.toneBlack { color: var(--color-black); }
+.toneCharcoal { color: var(--color-black-700); }
+.toneBrand { color: var(--color-persian-blue-800); }

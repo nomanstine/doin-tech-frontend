@@ -1,0 +1,21 @@
+.button {
+  composes: labelL from "../Typography/Typography.module.css";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-3) var(--space-6);
+  border: 0;
+  border-radius: var(--radius-pill);
+  white-space: nowrap;
+  text-decoration: none;
+  cursor: pointer;
+  transition: filter 150ms ease;
+}
+
+.button:hover { filter: brightness(0.95); }
+.button:focus-visible { outline: 2px solid var(--color-white); outline-offset: 2px; }
+
+.primary {
+  background: var(--color-accent);
+  color: var(--color-text-primary);
+}

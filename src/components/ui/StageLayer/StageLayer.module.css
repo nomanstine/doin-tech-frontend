@@ -1,0 +1,10 @@
+/* A decorative layer laid out on the 1440×1024 Figma frame, centred on any viewport. */
+.stage {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: var(--stage-width);
+  height: var(--stage-height);
+  transform: translateX(-50%);
+  pointer-events: none;
+}

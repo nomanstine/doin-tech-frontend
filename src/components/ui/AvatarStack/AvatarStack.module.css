@@ -1,0 +1,40 @@
+.stack {
+  display: flex;
+  align-items: center;
+}
+
+/* md: hero + feature cards; sm: course cards */
+.md { --avatar-size: 43px; --avatar-overlap: 16px; }
+.sm { --avatar-size: 32px; --avatar-overlap: 8px; }
+
+.avatar {
+  position: relative;
+  flex: none;
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  margin-inline-end: calc(var(--avatar-overlap) * -1);
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.badge {
+  position: relative;
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+}
+
+.badgeLabel {
+  position: relative;
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--color-text-primary);
+}
+
+.md .badgeLabel { font-weight: 700; line-height: 1.5; }
+.sm .badgeLabel { font-weight: 500; line-height: 20px; }
+
+/* dark badge (on lime cards and on the auth showcase) */
+.dark .badgeLabel { color: var(--color-text-on-brand); }

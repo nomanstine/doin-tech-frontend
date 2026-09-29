@@ -1,0 +1,33 @@
+/* Consumer sets position + width via className; height follows the square aspect ratio. */
+.ornament {
+  position: absolute;
+  aspect-ratio: 1;
+}
+
+.flipped { transform: scaleX(-1); }
+
+/* The small bleed the design gives each 3D render (springs and cones differ slightly). */
+.artwork {
+  position: absolute;
+  inset: 0 -0.47% -0.47% -0.93%;
+}
+
+.artworkCone { inset: -0.22% 0.56% -0.28% -1.05%; }
+
+.image { object-fit: cover; }
+
+/* Colour overlay clipped to the shape's alpha mask, blended over the render. */
+.tint {
+  position: absolute;
+  inset: 0;
+  mix-blend-mode: hard-light;
+  -webkit-mask-image: var(--ornament-mask);
+  mask-image: var(--ornament-mask);
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+.tintLime { background: var(--color-accent); }
+.tintWhite { background: var(--color-shuttle-gray-50); }
